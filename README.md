@@ -54,8 +54,29 @@ The dashboard provides several outputs:
 3. **Interest Rate vs. Probability of Losing Money**: Shows how the probability of losing money varies with different interest rates, helping identify the optimal rate for a given target probability.
 
 ## Example
+For this input variables, the results are shown below:
 
-For an interest rate of X%, the distribution of earnings is displayed along with the probability of losing money. The dashboard also shows the difference between theoretical calculations and Monte Carlo simulations, offering insights into potential risks.
+| Parameter  | Value |
+| ------------- | ------------- |
+| Number of Loans  | 10,000 |
+| Loan Amount   | $180,000  |
+| Loss per Foreclosure | $200,000  |
+| Interest Rate | 2.4% |
+| Default Rate | 2.0% |
+| Desired Probability of Losing Money | 1.0% |
+| Monte Carlo Simulation Paths | 5,000 |
+| Probability of Default Changing | 0.0% |
+| Percentage Change in Default Amount (if it changes)| 0.0% |
+| Probability of Default Changing Up (if it changes) | 50.0% |
+
+
+The distribution of earnings is displayed below.
+![image](imgs/earnings.png)
+The dashboard also shows the difference between theoretical calculations and Monte Carlo simulations in terms of probability of losing money.
+![image](imgs/prob_of_losing.png)
+Finally, the optimal interest rate required to achieve a 1% probability of losing money is calculated based on both theoretical and Monte Carlo results.
+![image](imgs/optimal_interest.png)
+
 
 ## Contributing
 

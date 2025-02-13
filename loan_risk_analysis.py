@@ -149,6 +149,12 @@ fig_pdf.update_layout(
     title='Probability Density Function', 
     xaxis_title='Total Earnings ($)', 
     yaxis_title='Density',
+    legend=dict(
+        yanchor="top",
+        y=0.99,
+        xanchor="left",
+        x=0.7,
+    ),
 )
 
 # compare the P_loss_ideal and P_loss_MC
