@@ -307,3 +307,10 @@ st.write(
     You can see how the probability of losing money increases significantly in this case (MC simulations).
     This is a very simplified example of how the global economic crisis can affect the banks' loan portfolios.
     """)
+st.write("You can try these settings to see this effect in the Monte Carlo simulation:")
+# print a table
+st.table({
+    "Probability of Default Changing": '50%',
+    "Percentage Change in Default Amount": '0.5%',
+    "Probability of Default Changing Up": '50%',
+})
