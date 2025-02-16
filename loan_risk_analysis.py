@@ -263,6 +263,31 @@ fig_r.update_layout(
 st.write(f"For the current settings, the interest rate that corresponds to the desired probability of losing money ({P_loss_des:.2%}) is {r_des:.2%}:")
 st.plotly_chart(fig_r)
 
+# find the optimal interest rate for a range of desired probabilities of losing money
+st.write(
+    """
+    The next figure shows the optimum interest rate for different desired probabilities of losing money.
+    """)
+
+P_loss_des_arr = np.linspace(0.001, 0.1, 100)
+r_des_arr = np.array([find_interest_rate_for_target_loss_probability(N, p, loss, loan, P_loss_des) for P_loss_des in P_loss_des_arr])
+
+fig_r_des = go.Figure()
+fig_r_des.add_trace(go.Scatter(
+    x=P_loss_des_arr,
+    y=r_des_arr,
+    mode='lines',
+))
+fig_r_des.update_layout(
+    title='Interest Rate for Desired Probability of Losing Money',
+    xaxis_title='Probability of Losing Money (%)',
+    yaxis_title='Interest Rate (%)',
+    # x axis is percentage (show one decimal)
+    xaxis_tickformat=',.1%',
+    yaxis_tickformat=',.2%',
+)
+st.plotly_chart(fig_r_des)
+
 st.write(
     """
     Lastly, effect of the changes in the probability of default on the total earnings is assessed using the Monte Carlo simulation.
