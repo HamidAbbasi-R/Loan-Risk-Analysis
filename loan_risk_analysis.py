@@ -244,6 +244,13 @@ fig_r.add_trace(go.Scatter(
     line_dash='dash',
     name=f'P(Loss) = {P_loss_des:.2%}',
 ))
+fig_r.add_vline(
+    x=r_des,
+    line_dash="dash",
+    line_color="red",
+    annotation_text=f"r = {r_des:.2%}",
+    annotation_position="top right",
+)
 fig_r.update_layout(
     title='Probability of Losing Money',
     xaxis_title='Interest Rate (%)',
