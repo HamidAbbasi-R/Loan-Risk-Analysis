@@ -280,7 +280,7 @@ fig_r_des.add_trace(go.Scatter(
 ))
 fig_r_des.update_layout(
     title='Interest Rate for Desired Probability of Losing Money',
-    xaxis_title='Probability of Losing Money (%)',
+    xaxis_title='Desired Probability of Losing Money (%)',
     yaxis_title='Interest Rate (%)',
     # x axis is percentage (show one decimal)
     xaxis_tickformat=',.1%',
