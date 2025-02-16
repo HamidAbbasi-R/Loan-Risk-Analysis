@@ -234,7 +234,7 @@ fig_r.add_trace(go.Scatter(
     x=r_arr,
     y=P_loss,
     mode='lines',
-    name='Ideal case (CLT)',
+    name=r'\\Phi\left(\frac{0 - \mathbb{E}(S_N)}{SE(S_N)}\right)',
 ))
 fig_r.add_trace(go.Scatter(
     x=r_arr,
