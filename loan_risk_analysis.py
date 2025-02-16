@@ -234,7 +234,7 @@ fig_r.add_trace(go.Scatter(
     x=r_arr,
     y=P_loss,
     mode='lines',
-    name='Ideal case',
+    name='Ideal case (CLT)',
 ))
 fig_r.add_trace(go.Scatter(
     x=r_arr,
