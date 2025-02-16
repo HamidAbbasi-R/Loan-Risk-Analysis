@@ -270,14 +270,17 @@ st.write(
     """)
 
 P_loss_des_arr = np.linspace(0.001, 0.1, 100)
-r_des_arr = np.array([find_interest_rate_for_target_loss_probability(N, p, loss, loan, P_loss_des) for P_loss_des in P_loss_des_arr])
+find_interest = find_interest_rate_for_target_loss_probability
+r_des_arr = np.array([np.array([find_interest(N, p, loss, loan, P_loss_des) for P_loss_des in P_loss_des_arr]) for N in [N*0.5, N, N*1.5]])
 
 fig_r_des = go.Figure()
-fig_r_des.add_trace(go.Scatter(
-    x=P_loss_des_arr,
-    y=r_des_arr,
-    mode='lines',
-))
+for i in range(3):
+    fig_r_des.add_trace(go.Scatter(
+        x=P_loss_des_arr,
+        y=r_des_arr[i],
+        mode='lines',
+        name=f'N = {N * (0.5 + i * 0.5):,.0f}',
+    ))
 fig_r_des.update_layout(
     title='Interest Rate for Desired Probability of Losing Money',
     xaxis_title='Desired Probability of Losing Money (%)',
