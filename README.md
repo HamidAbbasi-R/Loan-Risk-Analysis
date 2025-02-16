@@ -1,5 +1,6 @@
 # Loan Risk Analysis Dashboard
-You can try this dashboard online [here](https://hamidabbasi-r-loan-risk-analysis-loan-risk-analysis-iumesf.streamlit.app/).
+You can try this dashboard on streamlit servers [here](https://hamidabbasi-r-loan-risk-analysis-loan-risk-analysis-lpnkxy.streamlit.app/).
+
 This repository contains a Streamlit-based dashboard for analyzing the risk of losing money on a loan portfolio. The dashboard provides both theoretical calculations and Monte Carlo simulations to estimate the probability of financial loss under various scenarios.
 
 ## Features
