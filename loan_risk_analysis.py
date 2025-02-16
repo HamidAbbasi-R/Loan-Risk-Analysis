@@ -83,7 +83,7 @@ st.write(
     Firstly, let's consider you're a bank and you have a loan portfolio.
     The loan portfolio consists of $N$ loans with a given amount ($Y$) for each loan.
     The probability of default for each loan is $p$; meaning that there is a probability of $p$ that the loan will not be paid back.
-    The loss per foreclosure is also given ($L$). Also note that $L < Y$. 
+    The loss per foreclosure is also given, $L$ ($L > Y$). 
     To compensate for the risk, you charge an interest rate $r$ for each loan.
     The expected value of the earnings from one loan is given by the formula: 
     
